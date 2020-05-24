@@ -1,12 +1,12 @@
 import React from 'react';
-import EntryView from './entryView';
+import EntryView from './EntryView';
 import EntryForm from './EntryForm';
 
 class View extends React.Component{
     constructor(props){
         super(props);
-        console.log(props.data);
     }
+
     render(){
         return(
             <div>

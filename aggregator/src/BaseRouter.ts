@@ -27,7 +27,7 @@ router.get('/', async function(req,res){
     let dbdata = {
         data: undefined
     };
-    dbdata.data = await Entry.find({},function(err,entries){
+    dbdata.data = await Entry.find({},null,  {sort: {creationDate: -1}}, function(err,entries){
         if(err){
             console.error(err);
             return ""
@@ -45,10 +45,11 @@ router.get('/', async function(req,res){
     res.send(`
         <html>
             <head>
-                <script src="http://localhost:4444/${hypernova.data.results.content.meta.js}"></script>
+                <title>Guestbook</title>
             </head>
             <body>
-                ${hypernova.data.results.content.html}        
+                ${hypernova.data.results.content.html}
+                <script src="http://localhost:4444/${hypernova.data.results.content.meta.js}"></script>        
             </body>
         </html>
     `)
