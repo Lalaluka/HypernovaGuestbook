@@ -1,0 +1,28 @@
+{
+  "name": "aggregator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "NODE_ENV=production nodemon",
+    "dev": "NODE_ENV=development nodemon"
+  },
+  "author": "Calvin Schröder",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "config": "^3.2.5",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.0",
+    "http-proxy-middleware": "^0.20.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.15",
+    "nodemon": "^2.0.1",
+    "ts-node": "^8.5.3",
+    "typescript": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2"
+  }
+}
